@@ -1,6 +1,6 @@
 # Exception.Live PHP library
 
-This is the client library for integrating apps with the :zap: [Honeybadger Exception Notifier for PHP](https://www.honeybadger.io/for/php/?utm_source=github&utm_medium=readme&utm_campaign=php&utm_content=Honeybadger+Exception+Notifier+for+PHP).
+This is the client library for integrating apps with the :zap: [Exception.Live Notifier for PHP](https://www.exception.live/?utm_source=github&utm_medium=readme&utm_campaign=php&utm_content=Exception+Live+Notifier+for+PHP).
 
 ## Framework Integrations
 
