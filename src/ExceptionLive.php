@@ -22,7 +22,7 @@ class ExceptionLive
     /**
      * @var string
      */
-    const API_URL = "https://exception.test/";
+    const API_URL = "https://exception.live/";
 
     /**
      * @var Client
