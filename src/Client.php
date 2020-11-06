@@ -85,7 +85,7 @@ class Client
     private function makeClient(): GuzzleClient
     {
         return new GuzzleClient([
-            'curl'            => array( CURLOPT_SSL_VERIFYPEER => false, CURLOPT_SSL_VERIFYHOST => false ),
+            'curl'            => [CURLOPT_SSL_VERIFYPEER => false, CURLOPT_SSL_VERIFYHOST => false],
             'base_uri' => ExceptionLive::API_URL,
             'http_errors' => false,
             'headers' => [

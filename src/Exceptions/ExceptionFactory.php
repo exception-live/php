@@ -22,12 +22,12 @@ class ExceptionFactory
     }
 
     /**
-     * @return void
+     * @return Exception
      * @throws Exception
      */
     public function make()
     {
-        $this->exception();
+        return $this->exception();
     }
 
     /**

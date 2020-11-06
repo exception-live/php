@@ -165,4 +165,13 @@ class ExceptionLive
         return ! $this->excludedException($throwable)
             && $this->config->api_key !== null;
     }
+
+    /**
+     * @param string $key
+     * @throws Exception
+     */
+    public function checkin(string $key): void
+    {
+        $this->client->checkin($key);
+    }
 }
