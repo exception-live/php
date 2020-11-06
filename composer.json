@@ -1,6 +1,6 @@
 {
     "name": "exception-live/php",
-    "description": "Excpetion.Live PHP library",
+    "description": "Exception.Live PHP library",
     "keywords": [
         "logging",
         "debugging",

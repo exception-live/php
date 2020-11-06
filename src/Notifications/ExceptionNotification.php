@@ -62,6 +62,45 @@ class ExceptionNotification extends Notification
     }
 
     /**
+     * @return array
+     */
+    protected function format(): array
+    {
+        $data = [
+            'type' => get_class($this->throwable),
+            'message' => $this->throwable->getMessage(),
+
+            'method' => $this->request->params()['method'] ?? null,
+
+            'backtrace' => $this->backtrace->trace(),
+
+            'environment' => $this->environment->getName(),
+
+            'cookies' => $this->request->cookies(),
+
+            'request' => $this->request->params()['data'],
+
+            'query' => $this->request->params()['query'],
+
+            'response' => null,
+
+            'environment_data' => $this->environment->values(),
+
+            'url' => $this->request->url(),
+            'referrer' => $this->request->referrer(),
+            'hostname' => $this->config->hostname ?? gethostname(),
+
+            'session' => $this->request->session(),
+
+            'headers' => $this->request->headers(),
+        ];
+
+        $data = array_merge($data, $this->additionalParams);
+
+        return array_merge(parent::format(), $data);
+    }
+
+    /**
      * @return Environment
      */
     private function getEnvironmentData(): Environment

@@ -48,6 +48,30 @@ class Request
     /**
      * @return array
      */
+    public function cookies(): array
+    {
+        return $this->request->cookies->all() ?? $_COOKIE;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function referrer(): ?string
+    {
+        return $_SERVER['HTTP_REFERER'] ?? null;
+    }
+
+    /**
+     * @return array
+     */
+    public function headers(): array
+    {
+        return $this->request->headers->all() ?? getallheaders();
+    }
+
+    /**
+     * @return array
+     */
     public function session(): array
     {
         return $this->request->hasSession() && $this->request->getSession()
