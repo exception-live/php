@@ -78,9 +78,9 @@ class ExceptionNotification extends Notification
 
             'cookies' => $this->request->cookies(),
 
-            'request' => $this->request->params()['data'],
+            'request' => $this->request->params()['data'] ?? [],
 
-            'query' => $this->request->params()['query'],
+            'query' => $this->request->params()['query'] ?? [],
 
             'response' => null,
 
