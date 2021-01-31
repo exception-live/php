@@ -51,7 +51,7 @@ class Client
             throw Exception::generic();
         }
 
-        if ($response->getStatusCode() !== Response::HTTP_CREATED) {
+        if ($response->getStatusCode() !== Response::HTTP_CREATED && $response->getStatusCode() !== Response::HTTP_OK) {
             throw (new ExceptionFactory($response))->make();
         }
 
