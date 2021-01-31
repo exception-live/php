@@ -17,7 +17,7 @@ class ExceptionLive
     /**
      * Package Version
      */
-    const VERSION = '0.1';
+    const VERSION = '0.1.2';
 
     /**
      * @var string
